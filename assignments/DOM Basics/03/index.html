@@ -39,5 +39,18 @@
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
+
+    ul.firstElementChild.style.backgroundColor = "red";
+    
+    var listItem = document.getElementsByTagName("li");
+    for (var i = 0; i < listItem.length; i++) {
+      listItem[i].style.backgroundColor = "blue";
+    }
+
+    listItem[2].style.backgroundColor = "pink";
+
+    var middleLi = listItem[1];
+    middleLi.previousElementSibling.style.backgroundColor = "coral";
+    middleLi.nextElementSibling.style.backgroundColor = "aquamarine";
   </script>
 </html>
