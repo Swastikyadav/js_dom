@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Move Event
+    </title>
+
+    <style>
+        h1,h4,h2 {
+            text-align: center;
+            font-family: sans-serif;
+        }
+        span {
+            color: red;
+        }
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Move Event</h1>
+    <h4>Move your Mouse around to get the coordinate.</h4>
+    <h2>screenX: <span id="screenX" class="screenX"></span></h2>
+    <h2>screenY: <span id="screenY" class="screenY"></span></h2>
+    <h2>clientX: <span id="clientX" class="clientX"></span></h2>
+    <h2>clientY: <span id="clientY" class="clientY"></span></h2>
+    <script>
+        document.body.addEventListener("mousemove", function(e) {
+            var x = e.screenX;
+            var y = e.screenY;
+            var x1 = e.clientX;
+            var y1 = e.clientY;
+
+            document.getElementById("screenX").innerText = x;
+            document.getElementById("screenY").innerText = y;
+            document.getElementById("clientX").innerText = x1;
+            document.getElementById("clientY").innerText = y1;
+        });
+    </script>
+</body>
+</html>
