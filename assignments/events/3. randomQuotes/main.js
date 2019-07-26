@@ -1,8 +1,4 @@
-var quotes;
-
-// Write your code here
-
-
+var quotes
 
 quotes = [
     {
@@ -314,3 +310,15 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+// Write your code here
+
+document.addEventListener("keydown", function(event) {
+    if (event.which == 32) {
+        //console.log("spacebar pressed!");
+        var len = quotes.length;
+        var mathRandom = Math.floor(Math.random()*len)+1;
+        document.getElementById("quote").innerText = `"${quotes[mathRandom].quoteText}" \n \n  -${quotes[mathRandom].quoteAuthor}`;
+
+    }
+});

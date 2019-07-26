@@ -12,5 +12,35 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+
+    <script>
+      document.body.style.fontFamily = "Arial, sans-serif";
+
+      var nickname = document.getElementById("nickname");
+      nickname.innerText = "Swastik";
+
+      var favorites = document.getElementById("favorites");
+      favorites.innerText = "Cricket";
+
+      var hometown = document.getElementById("hometown");
+      hometown.innerText = "New Delhi";
+
+      var li = document.getElementsByTagName("li");
+      for (var i = 0; i < li.length; i++) {
+        li[i].className = "listitem";
+      }
+
+      var listItem = document.getElementsByClassName("listitem");
+      for (var i = 0; i < li.length; i++) {
+        listItem[i].style.color = "red";
+      }
+
+      var myPic = document.createElement("img");
+      myPic.setAttribute("src", "https://avatars3.githubusercontent.com/u/44374494?s=180&v=4");
+      myPic.setAttribute("width", "250");
+      myPic.setAttribute("height", "250");
+
+      document.body.appendChild(myPic);
+    </script>
   </body>
 </html>

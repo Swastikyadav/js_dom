@@ -9,8 +9,36 @@
   <body>
     <body>
       <h1>Document Object Model</h1>
+      <div id="p"></div>
+      <div id="ul"></div>
     <script>
       // your code goes here
+      var newP = document.createElement("p");
+      newP.textContent = "Hello JavaScript!";
+      newP.innerHTML = "I love <strong>JavaScript</strong>"
+
+      document.querySelector("#p").appendChild(newP);
+      
+      var newUl = document.createElement("ul");
+      var newLi1 = document.createElement("li");
+      var newLi2 = document.createElement("li");
+      var newLi3 = document.createElement("li");
+
+      newLi1.innerText = "Buy Groceries";
+      newLi2.innerText = "Feed the cat";
+      newLi3.innerText = "Do laundry";
+
+      newUl.appendChild(newLi1);
+      newUl.appendChild(newLi2);
+      newUl.appendChild(newLi3);
+
+      newLi4 = document.createElement("li");
+      newLi4.innerText = "New List";
+      newUl.appendChild(newLi4);
+
+      newUl.removeChild(newLi4);
+
+      document.querySelector("#ul").appendChild(newUl);
     </script>
   </body>
 </html>
